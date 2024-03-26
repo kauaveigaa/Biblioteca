@@ -67,6 +67,5 @@ app.get('/buscar/:ano', (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
-});
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log('Server ready on port ${port}'));
